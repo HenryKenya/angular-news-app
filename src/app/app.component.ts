@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'unit-testing-fundamentals';
+  isVisible: boolean = false;
+  
+  fetchData() {
+    this.isVisible = !this.isVisible
+  }
 }

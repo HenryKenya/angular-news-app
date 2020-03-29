@@ -1,9 +1,9 @@
 <div class="wrapper">
   <h1 class="title">Angular Testing</h1>
-  <button class="btn btn-large btn-dark">Show data</button>
+  <button class="btn btn-large btn-dark" (click)="fetchData()">Show data</button>
 
   <div class="list-data"> 
-    <ul>
+    <ul *ngIf="isVisible">
       <li>John Doe</li>
       <li>Jane Doe</li>
   </ul>
