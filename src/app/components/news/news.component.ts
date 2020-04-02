@@ -7,12 +7,22 @@ import { NewsService } from './../../services/news/news.service'
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-
+  theNews = ''
+  eachNews = []
   constructor(private newsService: NewsService) { }
 
   ngOnInit() {
   }
   showNews(){
-    this.newsService.getCurrentNews('title')
+    this.newsService.getNewsItems().subscribe(theNews => this.eachNews = theNews)
+
+    return this.eachNews
+    
+    
+  ;
+   
+
+        
+    
   }
 }
